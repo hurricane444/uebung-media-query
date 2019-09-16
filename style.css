@@ -24,6 +24,7 @@ html, body{
 }
 
 .card img{
+
 	width: 100%;
 	display: block;
 }
@@ -36,3 +37,32 @@ html, body{
 	border: 3px solid #3f888f;
 	outline: 2px solid pink;
 }
+
+@media (min-width: 960px) {
+body{
+background: red;
+}
+
+
+/* was passiert wenn man row außerhalb vom mediaquery reinpackt */
+/* die reihe wird geflext. nur die direkten Kinder. nicht die Images werden geflexed, sondern die Cards */
+
+.row{
+	display:flex;
+	background: blue; min-height: 600px;
+	align-items: flex-end
+	/* es war noch Platz auf der Y-Achse, sonst geht es nicht  */
+}
+/* display: flex. sie wachsen mit */
+
+}
+
+@media (min-width: 1200px) {
+	body{
+		background: yellow;
+	}
+}
+/* min-width:.... & max. geht auch. es gibt verschiedene methoden
+float, flexbox
+responsive Images
+responsive web design mit media queries */
